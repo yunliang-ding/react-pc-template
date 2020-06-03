@@ -10,7 +10,9 @@ class Content extends React.Component<any, any> {
   }
   render() {
     return <div className='app-content'>
-      欢迎使用react-pc-template(base)
+      <div>
+        <img src='/static/image/icon.svg' style={{height: 200}} />
+      </div>
     </div>
   }
 }

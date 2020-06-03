@@ -12,7 +12,7 @@ class Layout extends React.Component<any, any> {
   render() {
     return <div className='app-layout'>
       <Sider />
-      <div style={{width: 'calc(100% - 200px)'}}>
+      <div style={{width: 'calc(100% - 240px)'}}>
         <Header />
         <Content />
         <Footer />
