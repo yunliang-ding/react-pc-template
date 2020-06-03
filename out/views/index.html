@@ -1,0 +1,32 @@
+<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0;maximum-scale=1.0; user-scalable=no;" />
+<title id="title">react-template</title>
+<script src='https://unpkg.com/react@16/umd/react.production.min.js'></script>
+<script src='https://unpkg.com/react-dom@16/umd/react-dom.production.min.js'></script>
+<script src='https://unpkg.com/react-router@3.2.4/umd/ReactRouter.min.js'></script>
+<style>
+  .load-spin{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .load-spin-iconfont{
+    font-size:60px;
+    color: #9a9a9a;
+    animation:load-spin-move 3s linear infinite;
+  }
+  @keyframes load-spin-move{
+    0%{-webkit-transform:rotate(0deg);}
+    25%{-webkit-transform:rotate(90deg);}
+    50%{-webkit-transform:rotate(180deg);}
+    75%{-webkit-transform:rotate(270deg);}
+    100%{-webkit-transform:rotate(360deg);}
+  }
+</style>
+<div id='app'>
+  <div class='load-spin'>
+    <i class='iconfont icon-loading load-spin-iconfont'></i>
+  </div>
+</div>
+<script src='./app.js'></script>
