@@ -77,7 +77,7 @@ const config = {
   },
   devServer: {
     host: getIPAdress(),
-    port: 8080,
+    port: 9000,
     hot: true,
     compress: true,
     contentBase: './www',

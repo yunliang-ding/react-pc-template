@@ -8,13 +8,9 @@ const get = async (url, params) => {
     params,
     timeout: 60000
   }
-
   try {
     response = await axios.get(url, options)
     store.UI.setLoading(false)
-    if (response.data.loginStatusCode === -1) {
-      store.UI.setLogin(true)
-    }
     return response.data
   } catch (err) {
     store.UI.setLoading(false)
@@ -37,9 +33,6 @@ const post = async (url, data, headers) => {
       },
       withCredentials: true
     })
-    if (response.data.loginStatusCode === -1) {
-      store.UI.setLogin(true)
-    }
     store.UI.setLoading(false)
     return response.data
   } catch (err) {
