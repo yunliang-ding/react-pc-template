@@ -1,2 +1,2 @@
-# ryui-charts
-基于ECharts封装的react基础图表库
+# react模版
+react基础项目模版
