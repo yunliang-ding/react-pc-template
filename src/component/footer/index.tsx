@@ -10,7 +10,6 @@ class Footer extends React.Component<any, any> {
   }
   render() {
     return <div className='app-footer'>
-      app-footer
     </div>
   }
 }

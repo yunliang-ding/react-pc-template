@@ -10,7 +10,7 @@ class Content extends React.Component<any, any> {
   }
   render() {
     return <div className='app-content'>
-      app-content
+      欢迎使用react-pc-template(base)
     </div>
   }
 }

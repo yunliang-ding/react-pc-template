@@ -10,7 +10,6 @@ class Sider extends React.Component<any, any> {
   }
   render() {
     return <div className='app-sider'>
-      app-sider
     </div>
   }
 }
