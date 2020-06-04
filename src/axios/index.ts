@@ -1,6 +1,6 @@
 import axios from 'axios'
 import store from '../store/index'
-const qs = require('qs')
+// const qs = require('qs')
 const get = async (url, params) => {
   store.UI.setLoading(true)
   let response = null
@@ -27,10 +27,18 @@ const post = async (url, data, headers) => {
   data = data || {}
   let response = null
   try {
-    response = await axios.post(url, qs.stringify(data), { // 控制允许接受的状态码范围
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
+    /*
+      服务器设置 cors 使用如下
+      response = await axios.post(url, qs.stringify(data), {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        withCredentials: true
+      })
+    */
+    // 代理请求如下
+    response = await axios.post(url, data, {
+      headers: headers ? Object.assign({}, headers): {},
       withCredentials: true
     })
     store.UI.setLoading(false)
